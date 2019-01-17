@@ -58,7 +58,13 @@ module.exports = function(manifest, installPath) {
         tmux: path.join(installPath, "bin/tmux"),
         nakBin: path.join(__dirname, "../node_modules/nak/bin/nak"),
         bashBin: "bash",
-        nodeBin: [path.join(installPath, win32 ? "node.exe" : "node/bin/node"), process.execPath],
+        // comment start by yanmh
+        // 不使用cloud9自己需要安装的node4，因为经常安装不上
+        // nodeBin: [path.join(installPath, win32 ? "node.exe" : "node/bin/node"), process.execPath],
+        // comment end by yanmh
+        // add start by yanmh
+        nodeBin: [process.execPath],
+        // add end by yanmh
         installPath: installPath,
         correctedInstallPath: correctedInstallPath,
         staticPrefix: "/static",
