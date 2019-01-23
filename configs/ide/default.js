@@ -2,7 +2,6 @@ define(function(require, exports, module) {
 var assert = require("assert");
 
 module.exports = function(options) {
-    console.log(options)
     assert(options.staticPrefix, "Option 'staticPrefix' must be set");
     assert(options.workspaceDir, "Option 'workspaceDir' must be set");
     assert(options.workspaceId, "Option 'workspaceId' must be set");
@@ -562,12 +561,8 @@ module.exports = function(options) {
         "plugins/c9.ide.panels/panel",
         "plugins/c9.ide.panels/area",
         "plugins/c9.ide.processlist/processlist",
-        
-        // Installer
-        // comment start by yanmh
-        // 防止出现安装提示
-        // "plugins/c9.ide.installer/gui",
-        // comment end by yanmh
+
+        "plugins/c9.ide.installer/gui",
         "plugins/c9.automate/automate",
         "plugins/c9.ide.installer/commands/centos",
         "plugins/c9.ide.installer/commands/darwin",
